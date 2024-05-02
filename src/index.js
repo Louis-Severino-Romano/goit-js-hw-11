@@ -8,15 +8,13 @@ const galleryEl = document.querySelector('.gallery');
 const searchInputEl = document.querySelector('input[name="searchQuery"');
 const searchFormEl = document.getElementById('search-form');
 
-///////////////////////////////////////////////////////////////
 
-// instantiate simplelightbox
 const lightbox = new SimpleLightbox('.lightbox', {
   captionsData: 'alt',
   captionDelay: 250,
 });
 
-///////////////////////////////////////////////////////////////
+
 let totalHits = 0;
 let reachedEnd = false;
 
@@ -73,7 +71,7 @@ function renderGallery(hits) {
   lightbox.refresh();
 }
 
-///////////////////////////////////////////////////////////////
+
 
 async function handleSubmit(e) {
   e.preventDefault();
@@ -106,7 +104,7 @@ async function handleSubmit(e) {
   }
 }
 
-///////////////////////////////////////////////////////////////
+
 
 async function loadMore() {
   options.params.page += 1;
